@@ -1,0 +1,138 @@
+@import url('reset.css');
+
+body {
+    display: grid;
+    grid-template-columns: 218px 1fr;
+    grid-template-rows: 56px 1fr;
+    grid-template-areas:
+        "header header"
+        "sidebar main";
+}
+
+header {
+    grid-area: header;
+    display: grid;
+    background-color: #fff;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    padding: 8px 24px;
+    justify-items: center;
+}
+
+header .left {
+    justify-self: start;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto;
+    gap: 32px;
+    align-items: center;
+}
+
+header .center {
+    display: grid;
+    grid-template-columns: 1fr 40px;
+    grid-template-rows: 40px;
+}
+
+header .center input {
+    width: 348px;
+    height: 40px;
+    border: 1px solid #ccc;
+}
+
+header .center .search {
+    place-self: center;
+    background-color: #f8f8f8;
+    border: 1px solid #ccc;
+    width: 40px;
+    height: 40px;
+    display: grid;
+    place-items: center;
+}
+
+header .right {
+    justify-self: end;
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: auto;
+    gap: 24px;
+    align-items: center;
+}
+
+header .right .avatar {
+    width: 40px;
+    height: 40px;
+}
+
+aside {
+    grid-area: sidebar;
+    display: grid;
+    background-color: #fff;
+    padding: 24px;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(10, 24px);
+    gap: 22px;
+}
+
+aside .menu-item {
+    display: grid;
+    grid: auto / 24px 1fr;
+    gap: 16px;
+    align-items: center;
+}
+
+aside .menu-item span {
+    font-size: 0.875rem;
+    font-weight: 400;
+    color: #000;
+}
+
+aside .menu-item span.select {
+    font-weight: 700;
+}
+
+main {
+    grid-area: main;
+    background-color: #f9f9f9;
+    display: grid;
+    grid: repeat(3, 262px) / repeat(4, 1fr);
+    row-gap: 14px;
+    column-gap: 34px;
+    padding: 28px;
+}
+
+main .video-item {
+    display: grid;
+    grid: auto 74px / auto;
+    padding: 16px;
+    gap: 16px;
+    width: 282px;
+}
+
+main .video-item .video {
+    width: 250px;
+    height: 140px;
+}
+
+main .video-item .details {
+    display: grid;
+    grid: 1fr / 42px auto;
+    gap: 10px;
+}
+
+main .video-item .details .details-description {
+    display: grid;
+    grid: 2fr 1fr 1fr / 1fr;
+}
+
+main .video-item .details .details-description h2 {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #000;
+}
+
+main .video-item .details .details-description span, p {
+    font-size: 0.75rem;
+    font-weight: 400;
+    color: #515151;
+}
